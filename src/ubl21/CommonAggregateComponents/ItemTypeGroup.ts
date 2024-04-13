@@ -92,7 +92,7 @@ type AllowedParams = {
   /** @type {UdtName} */
   brandName?: string | UdtName;
   modelName?: string | UdtName;
-  sellersItemIdentification: SellersItemIdentification;
+  sellersItemIdentification?: SellersItemIdentification;
   classifiedTaxCategory: ClassifiedTaxCategory;
 };
 
