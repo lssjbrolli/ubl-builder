@@ -10,7 +10,7 @@ import {
   PaymentExchangeRate,
   ExchangeRateParams,
   PaymentTerms,
-  PaymentTermsTypeParams,
+  PaymentTermsParams,
   DeliveryTerms,
   DeliveryTermsParams,
   PaymentMeans,
@@ -782,7 +782,7 @@ export default class Invoice {
    * 44 PrepaidPayment, PaymentTypeParams
    * @param value
    */
-  addPaymentTerm(value: PaymentTerms | PaymentTermsTypeParams): Invoice {
+  addPaymentTerm(value: PaymentTerms | PaymentTermsParams): Invoice {
         if (!this.children.paymentTerms) {
       this.children.paymentTerms = [];
     }

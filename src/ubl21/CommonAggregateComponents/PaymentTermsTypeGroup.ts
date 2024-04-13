@@ -49,7 +49,7 @@ const ParamsMap: IGenericKeyValue<ParamsMapValues> = {
     max: 1,
     classRef: UdtIdentifier,
   },
-  notes: { order: 4, attributeName: 'cbc:Note', min: 0, max: undefined, classRef: UdtText },
+  note: { order: 4, attributeName: 'cbc:Note', min: 0, max: undefined, classRef: UdtText },
   referenceEventCode: { order: 5, attributeName: 'cbc:ReferenceEventCode', min: 0, max: 1, classRef: UdtCode },
   settlementDiscountPercent: {
     order: 6,
@@ -98,31 +98,33 @@ const ParamsMap: IGenericKeyValue<ParamsMapValues> = {
 };
 
 type AllowedParams = {
-  id: string | UdtIdentifier;
-  paymentMeansIDs: string[] | UdtIdentifier[];
-  prepaidPaymentReferenceID: string | UdtIdentifier;
-  notes: string | UdtText;
-  referenceEventCode: string | UdtCode;
-  settlementDiscountPercent: string | UdtCode;
-  penaltySurchargePercent: string | UdtPercent;
-  paymentPercent: string | UdtPercent;
-  amount: string | UdtAmount;
-  settlementDiscountAmount: string | UdtAmount;
-  penaltyAmount: string | UdtAmount;
-  PaymentTermsDetailsURI: string | UdtIdentifier;
-  paymentDueDate: string | UdtDate;
-  installmentDueDate: string | UdtDate;
+  id?: string | UdtIdentifier;
+  paymentMeansIDs?: string[] | UdtIdentifier[];
+  prepaidPaymentReferenceID?: string | UdtIdentifier;
+  note?: string | UdtText;
+  referenceEventCode?: string | UdtCode;
+  settlementDiscountPercent?: string | UdtCode;
+  penaltySurchargePercent?: string | UdtPercent;
+  paymentPercent?: string | UdtPercent;
+  amount?: string | UdtAmount;
+  settlementDiscountAmount?: string | UdtAmount;
+  penaltyAmount?: string | UdtAmount;
+  PaymentTermsDetailsURI?: string | UdtIdentifier;
+  paymentDueDate?: string | UdtDate;
+  installmentDueDate?: string | UdtDate;
   // invoicingPartyReference: ,
-  settlementPeriod: string | PeriodType;
-  penaltyPeriod: string | PeriodType;
+  settlementPeriod?: string | PeriodType;
+  penaltyPeriod?: string | PeriodType;
+  // exchangeRate?: string;
+  // validityPeriod?: string;
 };
 
 /**
  *
  */
 class PaymentTermsType extends GenericAggregateComponent {
-  constructor(content: string) {
-    super(content, ParamsMap, 'cac:PaymentTermsType');
+  constructor(content: AllowedParams) {
+    super(content, ParamsMap, 'cac:PaymentTerms');
   }
 }
 
