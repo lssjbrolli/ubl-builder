@@ -126,4 +126,4 @@ class PaymentTermsType extends GenericAggregateComponent {
   }
 }
 
-export { PaymentTermsType as PaymentTerms, AllowedParams as PaymentTermsTypeParams };
+export { PaymentTermsType as PaymentTerms, AllowedParams as PaymentTermsParams };

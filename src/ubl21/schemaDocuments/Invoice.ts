@@ -782,8 +782,13 @@ export default class Invoice {
    * 44 PrepaidPayment, PaymentTypeParams
    * @param value
    */
-  addPaymentTerm(value: any) {
-    throw new Error('not implemented');
+  addPaymentTerm(value: PaymentTerms | PaymentTermsTypeParams): Invoice {
+        if (!this.children.paymentTerms) {
+      this.children.paymentTerms = [];
+    }
+    const itemToPush = value instanceof PaymentTerms ? value : new PaymentTerms(value);
+    this.children.paymentTerms.push(itemToPush);
+    return this;
   }
 
   /**
