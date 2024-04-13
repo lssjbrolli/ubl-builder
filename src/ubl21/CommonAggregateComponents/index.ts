@@ -93,7 +93,7 @@ import { Delivery, DeliveryTypeParams } from './DeliveryTypeGroup';
 
 import { DeliveryTerms, DeliveryTermsParams } from './DeliveryTerms';
 import { PaymentMeans, PaymentMeansParams } from './PaymentMeans';
-import { PaymentTerms, PaymentTermsTypeParams } from './PaymentTermsTypeGroup';
+import { PaymentTerms, PaymentTermsParams } from './PaymentTermsTypeGroup';
 import { PaymentType, PaymentTypeParams, PrepaidPayment } from './PaymentTypeGroup';
 import { ExchangeRate, ExchangeRateParams, PaymentExchangeRate, PricingExchangeRate } from './ExchangeRateTypeGroup';
 import { TaxTotal, TaxTotalTypeParams, WithholdingTaxTotal } from './TaxTotalTypeGroup';
@@ -227,7 +227,7 @@ export {
   PaymentMeans,
   PaymentMeansParams,
   PaymentTerms,
-  PaymentTermsTypeParams,
+  PaymentTermsParams,
   PaymentType,
   PaymentTypeParams,
   PrepaidPayment,
