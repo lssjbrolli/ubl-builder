@@ -88,7 +88,7 @@ type AllowedParams = {
   /** An identifier for this party's logo */
   logoReferenceID?: UdtIdentifier | string;
   /** An identifier for the end point of the routing service (e.g., EAN Location Number, GLN) */
-  EndpointID: UdtIdentifier | string;
+  EndpointID?: UdtIdentifier | string;
   /** This party's Industry Classification Code */
   industryClassificationCode?: UdtCode | string;
   /**  An identifier for this party */
